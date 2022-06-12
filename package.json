@@ -1,5 +1,5 @@
 {
-  "name": "wa-api",
+  "name": "wa-bot",
   "version": "1.0.0",
   "description": "Whatsapp api by TIA Programming",
   "main": "app.js",
