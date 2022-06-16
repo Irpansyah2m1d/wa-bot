@@ -1,4 +1,4 @@
-const { Client, MessageMedia, LocalAuth } = require("whatsapp-web.js");
+const { Client, MessageMedia, LegacySessionAuth, LocalAuth } = require("whatsapp-web.js");
 const express = require("express");
 const { body, validationResult } = require("express-validator");
 const socketIO = require("socket.io");
@@ -50,6 +50,7 @@ const client = new Client({
     ],
   },
   authStrategy: new LocalAuth(),
+  executablePath: "/app/.apt/usr/bin/google-chrome",
 });
 
 client.on("message", (msg) => {
